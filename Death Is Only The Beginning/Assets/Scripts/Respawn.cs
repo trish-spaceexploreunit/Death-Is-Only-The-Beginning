@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Respawn : MonoBehaviour
 {
     Vector3 respawnLocation;
     [SerializeField] GameObject deathGround;
+    int timesRespawned;
     
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,17 @@ public class Respawn : MonoBehaviour
     {
         if (other.CompareTag("Respawn"))
         {
-            RespawnSprite();
+            timesRespawned++;
+            LevelDataScript data = FindObjectOfType<LevelDataScript>();
+            int maxRespawns = data.levelLives;
+            if (timesRespawned <= maxRespawns)
+            {
+                RespawnSprite();
+            }
+            else
+            {
+                RespawnStage();
+            }
         }
     }
 
@@ -29,5 +41,10 @@ public class Respawn : MonoBehaviour
         Instantiate(deathGround, transform.position, Quaternion.identity);
         transform.position = respawnLocation;
         
+    }
+
+    void RespawnStage()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
