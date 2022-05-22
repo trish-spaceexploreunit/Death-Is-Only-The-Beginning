@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bb80bc404c490d146a0125cd432c9b16
+guid: 4c12cf7e5cf968041b57252eb2051325
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixil-frame-0 (2)_0
+      name: DeathAnimSheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adebe50b51642d54599a223f2e2990e1
-      internalID: 628076308
+      spriteID: df89f23ad3e09b346bf8142ec8345e73
+      internalID: 1486340790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 (2)_1
+      name: DeathAnimSheet_1
       rect:
         serializedVersion: 2
         x: 512
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f56c89f04399ad94fa8cbe9b09f01ad3
-      internalID: -1376100972
+      spriteID: 004eb6721eff9754da09b9561436cbc4
+      internalID: 1190355201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 (2)_2
+      name: DeathAnimSheet_2
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0899392121f424b43ba026bf17ca9663
-      internalID: 134435060
+      spriteID: 2e7209acd85fafb45911406852e42129
+      internalID: -1478567645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 (2)_3
+      name: DeathAnimSheet_3
       rect:
         serializedVersion: 2
         x: 512
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 796f9b4836254994ea5f498ba7b51faf
-      internalID: 1280562740
+      spriteID: 71cb3a4d1a189bc46ad578d2e562d9ba
+      internalID: 1147218314
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pixil-frame-0 (2)_0: 628076308
-      pixil-frame-0 (2)_2: 134435060
-      pixil-frame-0 (2)_1: -1376100972
-      pixil-frame-0 (2)_3: 1280562740
+      DeathAnimSheet_0: 1486340790
+      DeathAnimSheet_2: -1478567645
+      DeathAnimSheet_3: 1147218314
+      DeathAnimSheet_1: 1190355201
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

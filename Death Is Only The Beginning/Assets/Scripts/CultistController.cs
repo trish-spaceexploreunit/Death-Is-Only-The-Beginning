@@ -8,7 +8,13 @@ public class CultistController : MonoBehaviour
     [SerializeField] float jumpHeight = 0.5f;
     [SerializeField] float fallSpeed = -0.1f;
     bool inAir;
-    
+    private Animator anim;
+
+    void Start() 
+    {
+        anim = GetComponent<Animator>();
+    }
+
     void Update()
     {
         float frameAdjustedSpeed = speed * Time.deltaTime;
@@ -25,6 +31,11 @@ public class CultistController : MonoBehaviour
         {
             inAir = true;
             transform.Translate(0, jumpHeight, 0);
+        }
+        if (Input.GetKey(KeyCode.R))
+        {
+            //Die and spawn a platform?
+            anim.SetBool("suicide", true);
         }
     }
 
