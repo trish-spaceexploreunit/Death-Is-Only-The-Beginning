@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1438317788181434970}
   - component: {fileID: 1438317788181434971}
   - component: {fileID: 1438317788181434968}
+  - component: {fileID: 5605630249877416610}
   m_Layer: 0
   m_Name: Cultist (Player Character)
   m_TagString: Player
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9ef9cf9e7508d664fa087e420cd8956a, type: 3}
+  m_Sprite: {fileID: 628076308, guid: bb80bc404c490d146a0125cd432c9b16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,18 +101,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.3400153, y: -0.008718491}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5933333, y: 1.4733334}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 0.5933333, y: 1.4733334}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5933333, y: 1.4733334}
+  m_Size: {x: 3.8191187, y: 5.0827255}
   m_EdgeRadius: 0
 --- !u!50 &1438317788181434971
 Rigidbody2D:
@@ -149,3 +150,23 @@ MonoBehaviour:
   speed: 2
   jumpHeight: 3
   fallSpeed: -1
+--- !u!95 &5605630249877416610
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438317788181434967}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b1fdbe60c1f0494ea2a1a95b56bae76, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
