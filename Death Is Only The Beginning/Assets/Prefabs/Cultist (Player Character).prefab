@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1438317788181434970}
   - component: {fileID: 1438317788181434971}
   - component: {fileID: 1438317788181434968}
-  - component: {fileID: 5605630249877416610}
+  - component: {fileID: 7380771764812366890}
   m_Layer: 0
   m_Name: Cultist (Player Character)
   m_TagString: Player
@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 628076308, guid: bb80bc404c490d146a0125cd432c9b16, type: 3}
+  m_Sprite: {fileID: 1245765513, guid: c7b5537bbebddb847ab67c809a293560, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5933333, y: 1.4733334}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,7 +106,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 0.5933333, y: 1.4733334}
+    newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   speed: 2
   jumpHeight: 3
   fallSpeed: -1
---- !u!95 &5605630249877416610
+--- !u!95 &7380771764812366890
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
