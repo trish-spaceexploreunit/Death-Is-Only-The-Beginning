@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d696896d843fe804895829b886a5e8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  jumpHeight: 3
+  speed: 5
+  jumpHeight: 5
   fallSpeed: -1
 --- !u!95 &5605630249877416610
 Animator:

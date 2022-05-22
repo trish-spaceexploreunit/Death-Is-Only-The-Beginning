@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class Respawn : MonoBehaviour
 {
     Vector3 respawnLocation;
+    Vector3 groundSpawnLocation;
     [SerializeField] GameObject deathGround;
+    [SerializeField] float delay = 1.0f;
     int timesRespawned;
     
     // Start is called before the first frame update
@@ -15,10 +17,30 @@ public class Respawn : MonoBehaviour
         respawnLocation = transform.position;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            groundSpawnLocation = transform.position;
+            timesRespawned++;
+            LevelDataScript data = FindObjectOfType<LevelDataScript>();
+            int maxRespawns = data.levelLives;
+            if (timesRespawned <= maxRespawns)
+            {
+                Invoke("RespawnSprite", delay);
+            }
+            else
+            {
+                Invoke("RespawnStage", delay);
+            }
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Respawn"))
         {
+            groundSpawnLocation = transform.position;
             timesRespawned++;
             LevelDataScript data = FindObjectOfType<LevelDataScript>();
             int maxRespawns = data.levelLives;
@@ -35,12 +57,8 @@ public class Respawn : MonoBehaviour
 
     void RespawnSprite()
     {
-        //move character model back to start
-        //ensure the camera resets
-        //can't just reload the scene because we need to potentially add a platform
-        Instantiate(deathGround, transform.position, Quaternion.identity);
+        Instantiate(deathGround, groundSpawnLocation, Quaternion.identity);
         transform.position = respawnLocation;
-        
     }
 
     void RespawnStage()
