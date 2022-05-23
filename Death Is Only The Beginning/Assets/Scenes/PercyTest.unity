@@ -242,7 +242,7 @@ PrefabInstance:
     - target: {fileID: 5605630249877416610, guid: 3f55fa2a2c23af741bb722bb3966f541, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 8b1fdbe60c1f0494ea2a1a95b56bae76, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8866797668061021041, guid: 3f55fa2a2c23af741bb722bb3966f541, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -254,7 +254,7 @@ PrefabInstance:
     - target: {fileID: 8866797668061021041, guid: 3f55fa2a2c23af741bb722bb3966f541, type: 3}
       propertyPath: m_Animations.Array.data[1]
       value: 
-      objectReference: {fileID: 7400000, guid: dbcbb8891d03b7441a26d504bc5da3bf, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8866797668061021041, guid: 3f55fa2a2c23af741bb722bb3966f541, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f55fa2a2c23af741bb722bb3966f541, type: 3}
