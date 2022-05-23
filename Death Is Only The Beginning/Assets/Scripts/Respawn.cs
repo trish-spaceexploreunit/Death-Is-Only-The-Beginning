@@ -12,27 +12,30 @@ public class Respawn : MonoBehaviour
     int timesRespawned;
     public Animator anim;
     bool respawning;
+    CultistController playerController;
     
     // Start is called before the first frame update
     void Start()
     {
         respawnLocation = transform.position;
         anim = GetComponent<Animator>();
+        playerController = GetComponent<CultistController>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && !respawning)
         {
+            playerController.toggleControls();
             groundSpawnLocation = transform.position;
             timesRespawned++;
             LevelDataScript data = FindObjectOfType<LevelDataScript>();
             int maxRespawns = data.levelLives;
-            if (timesRespawned <= maxRespawns && !respawning)
+            if (timesRespawned <= maxRespawns)
             {
                 Invoke("RespawnSprite", delay);
             }
-            else if (!respawning)
+            else
             {
                 Invoke("RespawnStage", delay);
             }
@@ -42,8 +45,9 @@ public class Respawn : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Respawn"))
+        if (other.CompareTag("Respawn") && !respawning)
         {
+            playerController.toggleControls();
             respawning = true;
             groundSpawnLocation = transform.position;
             timesRespawned++;
@@ -66,6 +70,7 @@ public class Respawn : MonoBehaviour
         transform.position = respawnLocation;
         anim.SetBool("suicide", false);
         respawning = false;
+        playerController.toggleControls();
     }
 
     void RespawnStage()
