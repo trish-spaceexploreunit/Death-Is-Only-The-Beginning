@@ -5,4 +5,5 @@ using UnityEngine;
 public class LevelDataScript : MonoBehaviour
 {
     public int levelLives;
+    public int nextSceneIndex;
 }

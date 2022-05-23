@@ -13,6 +13,7 @@ public class Respawn : MonoBehaviour
     public Animator anim;
     bool respawning;
     CultistController playerController;
+    LevelDataScript data;
     
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class Respawn : MonoBehaviour
         respawnLocation = transform.position;
         anim = GetComponent<Animator>();
         playerController = GetComponent<CultistController>();
+        data = FindObjectOfType<LevelDataScript>();
     }
 
     void Update()
@@ -29,7 +31,6 @@ public class Respawn : MonoBehaviour
             playerController.toggleControls();
             groundSpawnLocation = transform.position;
             timesRespawned++;
-            LevelDataScript data = FindObjectOfType<LevelDataScript>();
             int maxRespawns = data.levelLives;
             if (timesRespawned <= maxRespawns)
             {
@@ -51,7 +52,6 @@ public class Respawn : MonoBehaviour
             respawning = true;
             groundSpawnLocation = transform.position;
             timesRespawned++;
-            LevelDataScript data = FindObjectOfType<LevelDataScript>();
             int maxRespawns = data.levelLives;
             if (timesRespawned <= maxRespawns)
             {
@@ -61,6 +61,14 @@ public class Respawn : MonoBehaviour
             {
                 RespawnStage();
             }
+        }
+        else if (other.CompareTag("Checkpoint"))
+        {
+            respawnLocation = transform.position;
+        }
+        else if (other.CompareTag("Finish"))
+        {
+            SceneManager.LoadScene(data.nextSceneIndex);
         }
     }
 
