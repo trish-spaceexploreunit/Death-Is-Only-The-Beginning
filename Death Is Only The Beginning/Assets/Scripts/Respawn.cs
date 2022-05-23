@@ -11,6 +11,7 @@ public class Respawn : MonoBehaviour
     [SerializeField] float delay = 1.0f;
     int timesRespawned;
     public Animator anim;
+    bool respawning;
     
     // Start is called before the first frame update
     void Start()
@@ -27,14 +28,15 @@ public class Respawn : MonoBehaviour
             timesRespawned++;
             LevelDataScript data = FindObjectOfType<LevelDataScript>();
             int maxRespawns = data.levelLives;
-            if (timesRespawned <= maxRespawns)
+            if (timesRespawned <= maxRespawns && !respawning)
             {
                 Invoke("RespawnSprite", delay);
             }
-            else
+            else if (!respawning)
             {
                 Invoke("RespawnStage", delay);
             }
+            respawning = true;
         }
     }
 
@@ -42,6 +44,7 @@ public class Respawn : MonoBehaviour
     {
         if (other.CompareTag("Respawn"))
         {
+            respawning = true;
             groundSpawnLocation = transform.position;
             timesRespawned++;
             LevelDataScript data = FindObjectOfType<LevelDataScript>();
@@ -62,6 +65,7 @@ public class Respawn : MonoBehaviour
         Instantiate(deathGround, groundSpawnLocation, Quaternion.identity);
         transform.position = respawnLocation;
         anim.SetBool("suicide", false);
+        respawning = false;
     }
 
     void RespawnStage()
