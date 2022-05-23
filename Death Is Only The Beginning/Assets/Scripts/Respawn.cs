@@ -10,11 +10,13 @@ public class Respawn : MonoBehaviour
     [SerializeField] GameObject deathGround;
     [SerializeField] float delay = 1.0f;
     int timesRespawned;
+    public Animator anim;
     
     // Start is called before the first frame update
     void Start()
     {
         respawnLocation = transform.position;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -59,6 +61,7 @@ public class Respawn : MonoBehaviour
     {
         Instantiate(deathGround, groundSpawnLocation, Quaternion.identity);
         transform.position = respawnLocation;
+        anim.SetBool("suicide", false);
     }
 
     void RespawnStage()

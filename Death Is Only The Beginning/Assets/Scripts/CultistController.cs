@@ -8,7 +8,7 @@ public class CultistController : MonoBehaviour
     [SerializeField] float jumpHeight = 0.5f;
     [SerializeField] float fallSpeed = -0.1f;
     bool inAir;
-    private Animator anim;
+    public Animator anim;
 
     void Start() 
     {
