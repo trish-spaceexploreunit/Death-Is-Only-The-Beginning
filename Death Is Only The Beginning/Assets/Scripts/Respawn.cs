@@ -9,6 +9,7 @@ public class Respawn : MonoBehaviour
     Vector3 groundSpawnLocation;
     [SerializeField] GameObject deathGround;
     [SerializeField] float delay = 1.0f;
+    [SerializeField] float groundYOffset = 1.0f;
     int timesRespawned;
     public Animator anim;
     bool respawning;
@@ -29,7 +30,7 @@ public class Respawn : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && !respawning)
         {
             playerController.toggleControls();
-            groundSpawnLocation = transform.position;
+            groundSpawnLocation = transform.position + new Vector3 (0, groundYOffset, 0);
             timesRespawned++;
             int maxRespawns = data.levelLives;
             if (timesRespawned <= maxRespawns)
