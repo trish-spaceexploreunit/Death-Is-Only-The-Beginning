@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1438317788181434971}
   - component: {fileID: 1438317788181434968}
   - component: {fileID: 7380771764812366890}
+  - component: {fileID: 5770783716961181927}
   m_Layer: 0
   m_Name: Cultist (Player Character)
   m_TagString: Player
@@ -171,3 +172,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5770783716961181927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438317788181434967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33be88ed62232f54bb33c12cad081532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathGround: {fileID: 328356043717441888, guid: a2da70bde2338fe449b93f98d853e143, type: 3}
+  delay: 1
+  groundYOffset: -2.5
+  anim: {fileID: 7380771764812366890}

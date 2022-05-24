@@ -8,14 +8,9 @@ public class CultistController : MonoBehaviour
     [SerializeField] float jumpHeight = 0.5f;
     [SerializeField] float fallSpeed = -0.1f;
     bool inAir;
-    public Animator anim;
+    [SerializeField] Animator anim;
     bool playerControl = true;
     float defaultGravityScale = 1.5f; //IF YOU EDIT THE GRAVITY IN THE RIGID BODY YOU MUST ALSO EDIT IT HERE
-    
-    void Start() 
-    {
-        anim = GetComponent<Animator>();
-    }
 
     void Update()
     {

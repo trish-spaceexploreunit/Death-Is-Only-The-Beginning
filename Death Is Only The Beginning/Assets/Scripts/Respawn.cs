@@ -11,7 +11,7 @@ public class Respawn : MonoBehaviour
     [SerializeField] float delay = 1.0f;
     [SerializeField] float groundYOffset = 1.0f;
     int timesRespawned;
-    public Animator anim;
+    [SerializeField] Animator anim;
     bool respawning;
     CultistController playerController;
     LevelDataScript data;
@@ -20,7 +20,7 @@ public class Respawn : MonoBehaviour
     void Start()
     {
         respawnLocation = transform.position;
-        anim = GetComponent<Animator>();
+        anim.SetBool("suicide", false);
         playerController = GetComponent<CultistController>();
         data = FindObjectOfType<LevelDataScript>();
     }
@@ -85,5 +85,6 @@ public class Respawn : MonoBehaviour
     void RespawnStage()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        anim.SetBool("suicide", false);
     }
 }
