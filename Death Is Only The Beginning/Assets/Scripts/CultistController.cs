@@ -21,10 +21,12 @@ public class CultistController : MonoBehaviour
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 transform.Translate(frameAdjustedSpeed, inAir? frameAdjustedFallSpeed:0, 0);
+                GetComponent<SpriteRenderer>().flipX = false;
             }
             else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 transform.Translate(-frameAdjustedSpeed, inAir? frameAdjustedFallSpeed:0, 0);
+                GetComponent<SpriteRenderer>().flipX = true;
             }
             if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) & !inAir)
             {

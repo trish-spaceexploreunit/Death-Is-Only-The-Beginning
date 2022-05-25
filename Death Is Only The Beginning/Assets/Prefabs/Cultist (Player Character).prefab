@@ -149,9 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  jumpHeight: 7.5
+  jumpTime: 0.33
   fallSpeed: -10
-  anim: {fileID: 7380771764812366890}
+  defaultJumpHeight: 0.066
 --- !u!95 &7380771764812366890
 Animator:
   serializedVersion: 4

@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] bool moveLeft;
     [SerializeField] float movementSpeed;
+    [SerializeField] SpriteRenderer sprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class EnemyController : MonoBehaviour
         if (other.CompareTag("Ground"))
         {
             moveLeft = !moveLeft;
+            sprite.flipX = !sprite.flipX;
         }
     }
 }

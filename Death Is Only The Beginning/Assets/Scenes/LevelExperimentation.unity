@@ -509,16 +509,8 @@ PrefabInstance:
       value: Cultist (Player Character)
       objectReference: {fileID: 0}
     - target: {fileID: 1438317788181434968, guid: 3f55fa2a2c23af741bb722bb3966f541, type: 3}
-      propertyPath: jumpTime
-      value: 0.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 1438317788181434968, guid: 3f55fa2a2c23af741bb722bb3966f541, type: 3}
       propertyPath: jumpDecel
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1438317788181434968, guid: 3f55fa2a2c23af741bb722bb3966f541, type: 3}
-      propertyPath: defaultJumpHeight
-      value: 0.066
       objectReference: {fileID: 0}
     - target: {fileID: 1438317788181434970, guid: 3f55fa2a2c23af741bb722bb3966f541, type: 3}
       propertyPath: m_Enabled
@@ -688,7 +680,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.775974, y: 1}
+    m_SensorSize: {x: 1.7773973, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -864,6 +856,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3619299008405859714, guid: 5680f432eaebd8c48a6f6d9b78dd534a, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3619299008405859715, guid: 5680f432eaebd8c48a6f6d9b78dd534a, type: 3}
       propertyPath: m_RootOrder
       value: 7
