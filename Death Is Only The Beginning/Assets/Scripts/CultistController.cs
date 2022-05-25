@@ -8,9 +8,8 @@ public class CultistController : MonoBehaviour
     [SerializeField] float jumpHeight = 0.5f;
     [SerializeField] float fallSpeed = -0.1f;
     bool inAir;
-    [SerializeField] Animator anim;
+    //[SerializeField] Animator anim;
     bool playerControl = true;
-    float defaultGravityScale = 1.5f; //IF YOU EDIT THE GRAVITY IN THE RIGID BODY YOU MUST ALSO EDIT IT HERE
 
     void Update()
     {
@@ -31,11 +30,6 @@ public class CultistController : MonoBehaviour
                 inAir = true;
                 transform.Translate(0, jumpHeight, 0);
             }
-            if (Input.GetKey(KeyCode.R))
-            {
-                //Die and spawn a platform?
-                anim.SetBool("suicide", true);
-            }
         }
 
     }
@@ -52,9 +46,17 @@ public class CultistController : MonoBehaviour
         }
     }
 
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Ground")
+        {
+            inAir = true;
+        }
+    }
+
     public void toggleControls()
     {
         playerControl = !playerControl;
-        GetComponent<Rigidbody2D>().gravityScale = playerControl ? defaultGravityScale : 0.0f;
+        GetComponent<Rigidbody2D>().constraints = playerControl?  RigidbodyConstraints2D.FreezeRotation : RigidbodyConstraints2D.FreezePositionY;
     }   
 }

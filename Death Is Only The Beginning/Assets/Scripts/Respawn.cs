@@ -30,6 +30,7 @@ public class Respawn : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && !respawning)
         {
             playerController.toggleControls();
+            anim.SetBool("suicide", true);
             groundSpawnLocation = transform.position + new Vector3 (0, groundYOffset, 0);
             timesRespawned++;
             int maxRespawns = data.levelLives;

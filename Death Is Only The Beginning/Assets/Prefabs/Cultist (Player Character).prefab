@@ -151,7 +151,7 @@ MonoBehaviour:
   speed: 20
   jumpHeight: 7.5
   fallSpeed: -10
-  anim: {fileID: 0}
+  anim: {fileID: 7380771764812366890}
 --- !u!95 &7380771764812366890
 Animator:
   serializedVersion: 4
