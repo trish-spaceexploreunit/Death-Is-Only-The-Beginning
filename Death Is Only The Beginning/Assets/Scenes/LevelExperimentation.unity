@@ -453,6 +453,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2da70bde2338fe449b93f98d853e143, type: 3}
+--- !u!1 &1348802864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3619299008405859718, guid: 5680f432eaebd8c48a6f6d9b78dd534a, type: 3}
+  m_PrefabInstance: {fileID: 3619299009584346566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1348802865
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348802864}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 320cd450dde09014d9bfb09902e33360, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1386215792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -688,7 +713,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.775974, y: 1}
+    m_SensorSize: {x: 2.1213872, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -874,7 +899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3619299008405859715, guid: 5680f432eaebd8c48a6f6d9b78dd534a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.56
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 3619299008405859715, guid: 5680f432eaebd8c48a6f6d9b78dd534a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -906,6 +931,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3619299008405859715, guid: 5680f432eaebd8c48a6f6d9b78dd534a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619299008405859716, guid: 5680f432eaebd8c48a6f6d9b78dd534a, type: 3}
+      propertyPath: m_Size.x
+      value: 3.7886238
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619299008405859716, guid: 5680f432eaebd8c48a6f6d9b78dd534a, type: 3}
+      propertyPath: m_Size.y
+      value: 5.0732737
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619299008405859716, guid: 5680f432eaebd8c48a6f6d9b78dd534a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.36032677
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619299008405859716, guid: 5680f432eaebd8c48a6f6d9b78dd534a, type: 3}
+      propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3619299008405859718, guid: 5680f432eaebd8c48a6f6d9b78dd534a, type: 3}
