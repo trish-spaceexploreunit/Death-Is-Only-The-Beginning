@@ -62,6 +62,6 @@ public class CultistController : MonoBehaviour
     public void toggleControls()
     {
         playerControl = !playerControl;
-        GetComponent<Rigidbody2D>().constraints = playerControl?  RigidbodyConstraints2D.FreezeRotation : RigidbodyConstraints2D.FreezePositionY;
+        GetComponent<Rigidbody2D>().constraints = playerControl?  RigidbodyConstraints2D.FreezeRotation : RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
     }   
 }

@@ -13,6 +13,7 @@ public class Respawn : MonoBehaviour
     int timesRespawned;
     [SerializeField] Animator anim;
     bool respawning;
+    bool spawnGround = true;
     CultistController playerController;
     LevelDataScript data;
     
@@ -31,6 +32,7 @@ public class Respawn : MonoBehaviour
         {
             playerController.toggleControls();
             anim.SetBool("suicide", true);
+            spawnGround = true;
             groundSpawnLocation = transform.position + new Vector3 (0, groundYOffset, 0);
             timesRespawned++;
             int maxRespawns = data.levelLives;
@@ -52,6 +54,7 @@ public class Respawn : MonoBehaviour
         {
             playerController.toggleControls();
             respawning = true;
+            spawnGround = true;
             groundSpawnLocation = transform.position;
             timesRespawned++;
             int maxRespawns = data.levelLives;
@@ -74,9 +77,33 @@ public class Respawn : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            playerController.toggleControls();
+            anim.SetBool("suicide", true);
+            respawning = true;
+            spawnGround = false;
+            timesRespawned++;
+            int maxRespawns = data.levelLives;
+            if (timesRespawned <= maxRespawns)
+            {
+                Invoke("RespawnSprite", delay/2);
+            }
+            else
+            {
+                Invoke("RespawnStage", delay/2);
+            }
+        }
+    }
+
     void RespawnSprite()
     {
-        Instantiate(deathGround, groundSpawnLocation, Quaternion.identity);
+        if (spawnGround)
+        {
+            Instantiate(deathGround, groundSpawnLocation, Quaternion.identity);
+        }
         transform.position = respawnLocation;
         anim.SetBool("suicide", false);
         respawning = false;
