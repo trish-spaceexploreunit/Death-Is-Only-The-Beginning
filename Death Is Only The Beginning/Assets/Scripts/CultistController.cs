@@ -5,10 +5,11 @@ using UnityEngine;
 public class CultistController : MonoBehaviour
 {
     [SerializeField] float speed = 0.5f;
-    [SerializeField] float jumpHeight = 0.5f;
-    [SerializeField] float fallSpeed = -0.1f;
+    private float endJump = 0f;
+    [SerializeField] float jumpTime = 2f;
+    [SerializeField] float fallSpeed = -5f;
+    [SerializeField] float defaultJumpHeight = .5f;
     bool inAir;
-    //[SerializeField] Animator anim;
     bool playerControl = true;
 
     void Update()
@@ -25,10 +26,14 @@ public class CultistController : MonoBehaviour
             {
                 transform.Translate(-frameAdjustedSpeed, inAir? frameAdjustedFallSpeed:0, 0);
             }
-            if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) & !inAir)
+            if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) & !inAir)
             {
                 inAir = true;
-                transform.Translate(0, jumpHeight, 0);
+                endJump = Time.time + jumpTime;
+            }
+            if (Time.time < endJump) 
+            {
+                transform.Translate(0, defaultJumpHeight, 0);
             }
         }
 
