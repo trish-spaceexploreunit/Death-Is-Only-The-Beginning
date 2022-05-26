@@ -8,11 +8,11 @@ public class ScrollText : MonoBehaviour
 
     [SerializeField] GameObject[] textList;
     [SerializeField] float fadeSpeed = 0.5f;
-    public int textIndex = 0;
-    public bool introTextCompleted = false;
-    public bool fadeIn = false;
-    public bool fadeOut = false;
-    public TextMeshProUGUI currText = null;
+    int textIndex = 0;
+    bool introTextCompleted = false;
+    bool fadeIn = false;
+    bool fadeOut = false;
+    TextMeshProUGUI currText = null;
 
     void Update()
     {
