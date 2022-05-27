@@ -20,11 +20,11 @@ public class StartBtns : MonoBehaviour
 
     void beginTask()
     {
-        SceneManager.LoadScene("LevelExperimentation");
+        SceneManager.LoadScene(1);
     }
 
     void creditsTask()
     {
-        Debug.Log("Credits go here");
+        SceneManager.LoadScene("Credits");
     }
 }
