@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 1245765513, guid: c7b5537bbebddb847ab67c809a293560, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   speed: 20
   jumpTime: 0.33
   fallSpeed: -10
-  defaultJumpHeight: 0.066
+  defaultJumpHeight: 0.075
 --- !u!95 &7380771764812366890
 Animator:
   serializedVersion: 4
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33be88ed62232f54bb33c12cad081532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathGround: {fileID: 328356043717441888, guid: a2da70bde2338fe449b93f98d853e143, type: 3}
+  deathGround: {fileID: 611119823425949892, guid: 11b1ac9ebb031fc4b855055caac59a61, type: 3}
   delay: 1
-  groundYOffset: -2.5
+  groundYOffset: -4
   anim: {fileID: 7380771764812366890}
