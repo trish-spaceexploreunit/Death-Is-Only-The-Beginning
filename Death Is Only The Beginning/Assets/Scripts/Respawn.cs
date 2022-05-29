@@ -10,12 +10,14 @@ public class Respawn : MonoBehaviour
     [SerializeField] GameObject deathGround;
     [SerializeField] float delay = 1.0f;
     [SerializeField] float groundYOffset = 1.0f;
+    [SerializeField] ParticleSystem bloodSpray;
     int timesRespawned;
     [SerializeField] Animator anim;
     bool respawning;
     bool spawnGround = true;
     CultistController playerController;
     LevelDataScript data;
+    HeartDisplay livesCounter;
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class Respawn : MonoBehaviour
         anim.SetBool("suicide", false);
         playerController = GetComponent<CultistController>();
         data = FindObjectOfType<LevelDataScript>();
+        livesCounter = GetComponent<HeartDisplay>();
     }
 
     void Update()
@@ -32,6 +35,7 @@ public class Respawn : MonoBehaviour
         {
             playerController.toggleControls();
             anim.SetBool("suicide", true);
+            bloodSpray.Play();
             spawnGround = true;
             groundSpawnLocation = transform.position + new Vector3 (0, groundYOffset, 0);
             timesRespawned++;
@@ -55,6 +59,7 @@ public class Respawn : MonoBehaviour
         {
             playerController.toggleControls();
             respawning = true;
+            bloodSpray.Play();
             spawnGround = true;
             groundSpawnLocation = transform.position;
             timesRespawned++;
@@ -92,6 +97,7 @@ public class Respawn : MonoBehaviour
             playerController.toggleControls();
             anim.SetBool("suicide", true);
             respawning = true;
+            bloodSpray.Play();
             spawnGround = false;
             timesRespawned++;
             int maxRespawns = data.levelLives;
@@ -119,6 +125,7 @@ public class Respawn : MonoBehaviour
         anim.SetBool("suicide", false);
         respawning = false;
         playerController.toggleControls();
+        livesCounter.RemoveHeart(data.levelLives-timesRespawned);
     }
 
     void RespawnStage()
