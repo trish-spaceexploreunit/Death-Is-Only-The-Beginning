@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   jumpTime: 0.33
-  fallSpeed: -10
+  fallSpeed: -12
   defaultJumpHeight: 0.075
 --- !u!95 &7380771764812366890
 Animator:

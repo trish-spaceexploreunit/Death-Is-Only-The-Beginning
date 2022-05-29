@@ -8,12 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroCinematic.unity
     guid: eb3c754fcd8334c4aab5e1bdadc6d1d4
-  - enabled: 0
-    path: Assets/Scenes/LevelExperimentation.unity
-    guid: a5fec7b780008ae47a3a40ccd3ca5775
-  - enabled: 0
-    path: Assets/Scenes/TransitionSceneTest.unity
-    guid: 86b27638ddb6e454eb14ad7d281b8b06
   - enabled: 1
     path: Assets/Scenes/Level0.unity
     guid: cdeb5452b785b0e4ebbeb3ff067b3880
@@ -26,6 +20,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: a7e75c1655ec24a479cbba3ea88a4851
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 201ec89c1f3d166438b2c8e2be6f5ba0
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: cc5f86b7ae3b6b04ca4042fc93ef038a
+  - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: c1eb1d24a043f7e4e99d78afda74e927
+  - enabled: 1
+    path: Assets/Scenes/Level7.unity
+    guid: 436b1a3d521514744af9143449a8564a
+  - enabled: 1
+    path: Assets/Scenes/Level8.unity
+    guid: 562db8d58eb18214d9613d9a7f7b9651
+  - enabled: 1
+    path: Assets/Scenes/Level9.unity
+    guid: 171ac3a9ecde7814ba8841519a587bb2
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 64d3fb7e22b6d354f829940b2a56b1b3
