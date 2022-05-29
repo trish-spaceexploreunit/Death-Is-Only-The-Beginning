@@ -12,6 +12,7 @@ public class Respawn : MonoBehaviour
     [SerializeField] float groundYOffset = 1.0f;
     int timesRespawned;
     [SerializeField] Animator anim;
+    [SerializeField] Sprite newSprite;
     bool respawning;
     bool spawnGround = true;
     CultistController playerController;
@@ -71,6 +72,9 @@ public class Respawn : MonoBehaviour
         }
         else if (other.CompareTag("Checkpoint"))
         {
+            SpriteRenderer sp = other.GetComponent<SpriteRenderer>();
+            sp.sprite = Resources.Load<Sprite>("CheckpointOn");
+
             respawnLocation = transform.position;
         }
         else if (other.CompareTag("Finish"))
@@ -90,7 +94,7 @@ public class Respawn : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             playerController.toggleControls();
-            anim.SetBool("suicide", true);
+            anim.SetBool("enemyTouch", true);
             respawning = true;
             spawnGround = false;
             timesRespawned++;
@@ -117,6 +121,7 @@ public class Respawn : MonoBehaviour
     {
         transform.position = respawnLocation;
         anim.SetBool("suicide", false);
+        anim.SetBool("enemyTouch", false);
         respawning = false;
         playerController.toggleControls();
     }

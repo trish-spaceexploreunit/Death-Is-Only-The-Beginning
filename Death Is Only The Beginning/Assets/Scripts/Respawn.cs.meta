@@ -3,7 +3,10 @@ guid: 33be88ed62232f54bb33c12cad081532
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - deathGround: {instanceID: 0}
+  - anim: {instanceID: 0}
+  - newSprite: {fileID: 21300000, guid: 7f21af917d0bad849a5906dfd8fcd400, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
