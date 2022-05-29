@@ -75,7 +75,7 @@ public class Respawn : MonoBehaviour
         }
         else if (other.CompareTag("Finish"))
         {
-            //other.GetComponent<Animator>().SetBool("finished", true);
+            other.GetComponent<Animator>().SetBool("finished", true);
             Invoke("LoadNextlevel", 1.0f);
          }
     }
