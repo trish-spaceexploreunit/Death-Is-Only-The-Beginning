@@ -670,6 +670,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f55fa2a2c23af741bb722bb3966f541, type: 3}
+--- !u!4 &1283344631 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1438317788181434965, guid: 3f55fa2a2c23af741bb722bb3966f541, type: 3}
+  m_PrefabInstance: {fileID: 1283344630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1409558248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -795,6 +800,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4205774984027249574, guid: 637639a4e4161974db993cc94fb15b43, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205774984027249574, guid: 637639a4e4161974db993cc94fb15b43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205774984027249575, guid: 637639a4e4161974db993cc94fb15b43, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1283344631}
+    - target: {fileID: 4205774984027249575, guid: 637639a4e4161974db993cc94fb15b43, type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 1.7803469
+      objectReference: {fileID: 0}
     - target: {fileID: 4205774984663739338, guid: 637639a4e4161974db993cc94fb15b43, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -805,11 +826,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4205774984663739349, guid: 637639a4e4161974db993cc94fb15b43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.3
+      value: 8.42
       objectReference: {fileID: 0}
     - target: {fileID: 4205774984663739349, guid: 637639a4e4161974db993cc94fb15b43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.24
+      value: 2.67
       objectReference: {fileID: 0}
     - target: {fileID: 4205774984663739349, guid: 637639a4e4161974db993cc94fb15b43, type: 3}
       propertyPath: m_LocalPosition.z
