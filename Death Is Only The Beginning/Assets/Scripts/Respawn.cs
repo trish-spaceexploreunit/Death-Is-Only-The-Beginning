@@ -38,6 +38,7 @@ public class Respawn : MonoBehaviour
             int maxRespawns = data.levelLives;
             if (timesRespawned <= maxRespawns)
             {
+                Invoke("SpawnPlatform", delay/2);
                 Invoke("RespawnSprite", delay);
             }
             else
@@ -60,7 +61,8 @@ public class Respawn : MonoBehaviour
             int maxRespawns = data.levelLives;
             if (timesRespawned <= maxRespawns)
             {
-                RespawnSprite();
+                Invoke("SpawnPlatform", delay/2);
+                Invoke("RespawnSprite", delay);
             }
             else
             {
@@ -73,8 +75,14 @@ public class Respawn : MonoBehaviour
         }
         else if (other.CompareTag("Finish"))
         {
-            SceneManager.LoadScene(data.nextSceneIndex);
-        }
+            //other.GetComponent<Animator>().SetBool("finished", true);
+            Invoke("LoadNextlevel", 1.0f);
+         }
+    }
+
+    void LoadNextlevel()
+    {
+        SceneManager.LoadScene(data.nextSceneIndex);
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -98,12 +106,15 @@ public class Respawn : MonoBehaviour
         }
     }
 
-    void RespawnSprite()
+    void SpawnPlatform()
     {
         if (spawnGround)
         {
             Instantiate(deathGround, groundSpawnLocation, Quaternion.identity);
         }
+    }
+    void RespawnSprite()
+    {
         transform.position = respawnLocation;
         anim.SetBool("suicide", false);
         respawning = false;
