@@ -35,7 +35,7 @@ public class CultistController : MonoBehaviour
             }
             if (Time.time < endJump) 
             {
-                transform.Translate(0, defaultJumpHeight, 0);
+                transform.Translate(0, defaultJumpHeight * Time.deltaTime, 0);
             }
         }
 

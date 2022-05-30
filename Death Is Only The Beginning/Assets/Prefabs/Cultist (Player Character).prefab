@@ -151,9 +151,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  jumpTime: 0.33
+  jumpTime: 0.5
   fallSpeed: -12
-  defaultJumpHeight: 0.075
+  defaultJumpHeight: 25
 --- !u!95 &7380771764812366890
 Animator:
   serializedVersion: 4
@@ -191,6 +191,7 @@ MonoBehaviour:
   groundYOffset: -4
   bloodSpray: {fileID: 5801442195598521894}
   anim: {fileID: 7380771764812366890}
+  newSprite: {fileID: 0}
 --- !u!114 &-7393097954243959418
 MonoBehaviour:
   m_ObjectHideFlags: 0
